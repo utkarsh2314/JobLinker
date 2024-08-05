@@ -48,11 +48,14 @@ export const register = catchAsyncErrors(async (req, res, next) => {
       const { resume } = req.files;
       if (resume) {
         try {
+          //   console.log(resume.tempFilePath);
           const cloudinaryResponse = await cloudinary.uploader.upload(
             resume.tempFilePath,
             { folder: "Job_Seekers_Resume" }
           );
           if (!cloudinaryResponse || cloudinaryResponse.error) {
+            // console.log("cloudinary responding");
+            // console.log(cloudinaryResponse.error);
             return next(
               new ErrorHandler("Failed to upload resume to cloud.", 500)
             );
