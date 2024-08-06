@@ -41,5 +41,5 @@ JobLinker is a comprehensive job portal built using the MERN stack (MongoDB, Exp
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/utkarsh2314/joblinker.git
-   cd joblinker
+   git clone https://github.com/utkarsh2314/JobLinker.git
+   cd JobLinker
