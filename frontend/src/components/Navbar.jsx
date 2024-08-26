@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
+import Logo from "./logo/logo.png";
+
 const Navbar = () => {
   const [show, setShow] = useState(false);
   const { isAuthenticated } = useSelector((state) => state.user);
@@ -9,7 +11,7 @@ const Navbar = () => {
     <>
       <nav className={show ? "navbar show_navbar" : "navbar"}>
         <div className="logo">
-          <img src="/logo.png" alt="logo" />
+          <img src={Logo} alt="logo" />
         </div>
         <div className="links">
           <ul>
